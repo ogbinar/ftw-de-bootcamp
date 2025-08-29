@@ -21,7 +21,7 @@ docker ps
 # Metabase: http://localhost:3001 • ClickHouse HTTP: http://localhost:8123
 
 # Stop everything (when done)
-docker compose down
+docker compose --profile core --compatibility down
 ```
 
 ---
