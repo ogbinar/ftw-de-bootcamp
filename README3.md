@@ -14,14 +14,14 @@ This guide shows how to run each **extract → load (dlt)** and **transform (dbt
 
 ```bash
 # Start core (ClickHouse, Metabase, Chinook Postgres)
-docker compose --compatibility up -d --profile core
+docker compose --profile core --compatibility up -d 
 
 # Check health
 docker ps
 # Metabase: http://localhost:3001 • ClickHouse HTTP: http://localhost:8123
 
 # Stop everything (when done)
-docker compose down
+docker compose --profile core --compatibility down
 ```
 
 ---
