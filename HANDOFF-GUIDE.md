@@ -18,7 +18,7 @@ All using **just this one folder**.
 
 ---
 
-# ## 1️⃣ Final Folder Structure (This is Required)
+## 1️⃣ Final Folder Structure (This is Required)
 
 Name your submission folder:
 
@@ -42,11 +42,11 @@ Each section below explains what goes inside.
 
 ---
 
-# ## 2️⃣ What Goes in Each Folder
+## 2️⃣ What Goes in Each Folder
 
 ---
 
-# ### 📄 00_PROJECT_OVERVIEW.docx
+### 📄 00_PROJECT_OVERVIEW.docx
 
 *(max 1–2 pages, written like an executive brief)*
 
@@ -76,7 +76,7 @@ Realistic “what should we do next” actions a manager can understand.
 
 ---
 
-# ### 📁 01_DATA_SOURCES
+### 📁 01_DATA_SOURCES
 
 Minimum required:
 
@@ -95,7 +95,7 @@ Optional (but great):
 
 ---
 
-# ### 📁 02_PIPELINE_AND_CODE
+### 📁 02_PIPELINE_AND_CODE
 
 This is your data engineering evidence.
 
@@ -151,7 +151,7 @@ Every script must have:
 
 ---
 
-# ### 📁 03_DATA_MODEL
+### 📁 03_DATA_MODEL
 
 This shows your analytical engineering maturity.
 
@@ -182,7 +182,7 @@ Focus on final transformed tables used in Tableau.
 
 ---
 
-# ### 📁 04_ANALYSIS_AND_DASHBOARDS
+### 📁 04_ANALYSIS_AND_DASHBOARDS
 
 This is the DA side of your work.
 
@@ -229,7 +229,7 @@ CAVEATS:
 
 ---
 
-# ### 📁 05_LIMITATIONS_AND_NEXT_STEPS
+### 📁 05_LIMITATIONS_AND_NEXT_STEPS
 
 This is where you show critical thinking.
 
@@ -264,7 +264,7 @@ Examples:
 
 ---
 
-# ### 📁 06_PRESENTATION
+### 📁 06_PRESENTATION
 
 Include:
 
@@ -284,7 +284,7 @@ The deck must stand alone:
 
 ---
 
-# ## 3️⃣ Non-Negotiable Checklist (You MUST say “yes” to all)
+## 3️⃣ Non-Negotiable Checklist (You MUST say “yes” to all)
 
 ### ✔ Standalone Project?
 
@@ -322,11 +322,11 @@ If any answer is “no,” fix it before submission.
 
 # 🧩 **Creating a Standalone Tableau Dashboard & Deploying to Tableau Public**
 
-# ## **1. Creating a Standalone Tableau Dashboard**
+## **1. Creating a Standalone Tableau Dashboard**
 
 A standalone Tableau dashboard means the workbook contains **all required data**, **no external connections**, and can be opened by anyone using **Tableau Desktop** or **Tableau Reader**.
 
-### ### **1.1 Convert All Data Sources to Extracts**
+### **1.1 Convert All Data Sources to Extracts**
 
 Tableau Public and standalone workbooks cannot use live connections.
 
@@ -341,7 +341,7 @@ Tableau Public and standalone workbooks cannot use live connections.
 
 ---
 
-### ### **1.2 Save as a Packaged Workbook (.twbx)**
+### **1.2 Save as a Packaged Workbook (.twbx)**
 
 A `.twbx` file bundles:
 
@@ -363,7 +363,7 @@ A `.twbx` file bundles:
 
 ---
 
-### ### **1.3 Ensure No Local Paths or External Dependencies**
+### **1.3 Ensure No Local Paths or External Dependencies**
 
 Remove anything that will break when opened by someone else.
 
@@ -378,7 +378,7 @@ Replace all with **Extracts** embedded in the `.twbx`.
 
 ---
 
-### ### **1.4 Test Your Standalone Workbook**
+### **1.4 Test Your Standalone Workbook**
 
 1. Move the `.twbx` to another folder.
 2. Disconnect from VPN / databases.
@@ -390,12 +390,12 @@ If it opens without errors, it’s truly standalone.
 
 ---
 
-# ## **2. Deploying the Dashboard to Tableau Public**
+## **2. Deploying the Dashboard to Tableau Public**
 
 Tableau Public is a **free hosting platform** with important constraints.
 You can upload your workbook if the following are true:
 
-### ### **2.1 Tableau Public Only Accepts EXTRACTS**
+### **2.1 Tableau Public Only Accepts EXTRACTS**
 
 The platform **does not support**:
 
@@ -408,7 +408,7 @@ The platform **does not support**:
 
 ---
 
-### ### **2.2 Data Becomes Public**
+### **2.2 Data Becomes Public**
 
 Tableau Public = all data is **publicly visible** and **downloadable**.
 
@@ -422,7 +422,7 @@ Anyone can:
 
 ---
 
-### ### **2.3 File Size Limits**
+### **2.3 File Size Limits**
 
 For free users:
 
@@ -439,7 +439,7 @@ Reduce size by:
 
 ---
 
-### ### **2.4 How to Publish**
+### **2.4 How to Publish**
 
 1. Log in to **Tableau Public**
 2. Go to **Profile → Upload a Workbook**
@@ -448,7 +448,7 @@ Reduce size by:
 
 ---
 
-### ### **2.5 Validate After Publishing**
+### **2.5 Validate After Publishing**
 
 Test on multiple devices:
 
@@ -466,9 +466,9 @@ Confirm:
 
 ---
 
-# ## **3. Final Checklist**
+## **3. Final Checklist**
 
-### ### ✔ **Standalone Workbook Validation**
+### ✔ **Standalone Workbook Validation**
 
 * [ ] All data connections converted to **Extracts**
 * [ ] Saved as **.twbx**
@@ -480,7 +480,7 @@ Confirm:
 
 ---
 
-### ### ✔ **Tableau Public Compatibility**
+### ✔ **Tableau Public Compatibility**
 
 * [ ] Data is safe to be **publicly downloadable**
 * [ ] File size is under Tableau Public limits
@@ -490,7 +490,7 @@ Confirm:
 
 ---
 
-### ### ✔ **Deployment Review**
+### ✔ **Deployment Review**
 
 * [ ] Dashboard tested on multiple devices
 * [ ] Filters, tooltips, parameters working
