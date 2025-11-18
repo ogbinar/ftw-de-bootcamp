@@ -342,6 +342,7 @@ git clone git@github.com:ogbinar/ftw-de-bootcamp.git
 - Data Quality checks using DBT? Read [this](DQ-TESTS.md).
 - Learn how to connect Tableau Desktop to ClickHouse server [here](tableau2clickhouse.md).
 - How does a Data Engineer build a great presentation? Read [this](PRESENTATION-GUIDE.md).
+- Creating a hand off documentation? Read [here](HANDOFF-GUIDE.md).
 
 # Track Your Learnings
 
