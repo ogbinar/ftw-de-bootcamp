@@ -499,4 +499,205 @@ Confirm:
 * [ ] Final `.twbx` uploaded successfully
 
 ---
- 
+
+# ✅ **How to Host a Tableau Public Dashboard on Your Website**
+
+There are **two ways**:
+
+1. **Embed the dashboard directly** (most common)
+2. **Link to your Tableau Public profile** (simple but not embedded)
+
+Let’s focus on the **embed**, since that’s what websites use.
+
+---
+
+## 🥇 **Method 1 — Embed the Dashboard on Your Website**
+
+### **Step 1 — Publish your dashboard to Tableau Public**
+
+If you haven’t yet:
+
+1. **Open Tableau Desktop**
+2. File → **Save to Tableau Public**
+3. Log in → Publish
+
+---
+
+### **Step 2 — Get the Embed Code**
+
+1. Go to your dashboard on Tableau Public
+2. Click **Share** (top-right)
+3. Copy the **Embed Code (iframe)**
+
+It looks like this:
+
+```html
+<iframe
+  src="https://public.tableau.com/views/YourWorkbookName/YourDashboardName?:embed=yes&:display_count=yes"
+  width="100%"
+  height="800px"
+  frameborder="0">
+</iframe>
+```
+
+---
+
+### **Step 3 — Paste into your website**
+
+Depending on your site, paste the embed code into:
+
+* **HTML block** (WordPress, Wix, Squarespace)
+* **index.html** (static site)
+* **React/Vue component** (inside `dangerouslySetInnerHTML` or similar)
+
+Example for a simple HTML page:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>My Tableau Dashboard</h1>
+
+    <iframe
+      src="https://public.tableau.com/views/YourWorkbookName/YourDashboardName?:embed=yes&:display_count=yes"
+      width="100%"
+      height="800"
+      frameborder="0">
+    </iframe>
+
+  </body>
+</html>
+```
+
+---
+
+## 🥈 Method 2 — Embed with JavaScript API (optional, advanced)
+
+If you want:
+
+* Dynamic resizing
+* Passing parameters
+* Button interactions
+* Filtering from your website
+
+Use Tableau’s JS API.
+
+Load the library:
+
+```html
+<script src="https://public.tableau.com/javascripts/api/tableau.viz.v1.js"></script>
+```
+
+Add a `div` placeholder:
+
+```html
+<div id="tableauViz" style="width: 100%; height: 800px;"></div>
+```
+
+Initialize it:
+
+```html
+<script>
+  var viz;
+
+  function initViz() {
+    var container = document.getElementById("tableauViz");
+    var url = "https://public.tableau.com/views/YourWorkbookName/YourDashboardName";
+    var options = {
+      hideTabs: true,
+      width: "100%",
+      height: "800px"
+    };
+    viz = new tableau.Viz(container, url, options);
+  }
+
+  window.onload = initViz;
+</script>
+```
+
+This gives you more control over events and filters.
+
+---
+
+## 💡 Pro Tips
+
+### ✔ **Make the iframe responsive**
+
+Wrap it in a container:
+
+```html
+<div style="position: relative; padding-bottom: 80%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://public.tableau.com/views/YourWorkbookName/YourDashboardName?:embed=yes"
+    style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"
+    frameborder="0">
+  </iframe>
+</div>
+```
+
+---
+
+### ✔ **Remove the Tableau toolbar**
+
+Add this to the URL:
+
+```
+?:showVizHome=no&:toolbar=no
+```
+
+---
+
+### ✔ **Auto-fit height**
+
+Use `height: 100vh`:
+
+```html
+<iframe src="..." style="height: 100vh; width: 100%;"></iframe>
+```
+
+---
+
+## 🧪 Troubleshooting
+
+### ❌ Dashboard not loading?
+
+Enable these:
+
+* Your site must allow **iframes**
+* Make sure your embedding isn't blocked by mixed HTTP/HTTPS
+* Tableau Public dashboard must be **public**, not private
+
+---
+
+### ❌ It looks blurry?
+
+Increase iframe height in px:
+
+```html
+height="1500"
+```
+
+---
+
+### ❌ Cannot scroll?
+
+Add:
+
+```html
+style="overflow:auto;"
+```
+
+---
+
+### 🎉 Summary (copy/paste)
+
+> **To host a Tableau Public dashboard on your website:**
+>
+> 1. Publish dashboard to Tableau Public
+> 2. Click **Share → Copy Embed Code**
+> 3. Embed the iframe into your website’s HTML
+> 4. (Optional) Use Tableau JS API for dynamic controls
+
